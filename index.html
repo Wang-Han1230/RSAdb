@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSAdb — Single-cell omics big data platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7fa;
+        }
+        
+        header {
+            background-color: #1a3c6e;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .content {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .section-subtitle {
+            font-size: 1.4rem;
+            color: #1a3c6e;
+            margin: 1.5rem 0 1rem 0;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: #f0f7ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            transition: transform 0.2s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .btn-primary {
+            background-color: #e74c3c;
+        }
+        
+        .btn-primary:hover {
+            background-color: #c0392b;
+        }
+        
+        .screenshot {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 1rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        .nav {
+            background-color: #2c3e50;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        .nav a:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#usage">Usage</a>
+        <a href="#deploy">Deploy</a>
+        <a href="#about">About</a>
+    </nav>
+    
+    <header id="home">
+        <h1>RSAdb</h1>
+        <p>Single-cell omics big data platform for recurrent spontaneous abortion</p>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <h2 class="section-title">Welcome to RSAdb</h2>
+            <p>RSAdb is a comprehensive open-access resource for investigating transcriptomic alterations associated with gene expression patterns within single-cell omics datasets at the maternal-fetal interface in human recurrent spontaneous abortion (RSA).</p>
+            
+            <div style="margin: 2rem 0;">
+                <a href="https://github.com/Wang-Han1230/RSAdb" class="btn" target="_blank">View on GitHub</a>
+                <a href="https://github.com/Wang-Han1230/RSAdb/archive/refs/heads/master.zip" class="btn">Download Code</a>
+            </div>
+        </div>
+        
+        <div class="content">
+            <h2 class="section-title" id="features">Features</h2>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Interactive Exploration</h3>
+                    <p>Explore 25,858 genes across 32 distinct cellular subpopulations derived from the maternal-fetal interface.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Publication-ready Visualizations</h3>
+                    <p>Generate high-quality plots including DimPlot, AlluvialPlot, GroupPreferencePlot, VlnPlot, and FeaturePlot.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Flexible Gene Set Scoring</h3>
+                    <p>Run gene set scoring on 5,809 curated datasets using single or paired gene sets.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Reproducible Results</h3>
+                    <p>One-click access to datasets, consolidated downloads, and step-by-step case studies.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Comprehensive Data</h3>
+                    <p>73,025 cells and 25,858 genes spanning 28 distinct cell types from normal pregnancy and RSA samples.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>User-friendly Interface</h3>
+                    <p>Intuitive web interface built with Shiny for easy navigation and analysis.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <h2 class="section-title" id="usage">Usage</h2>
+            
+            <h3 class="section-subtitle">Prerequisites</h3>
+            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li>R 4.5.0 or higher</li>
+                <li>Required R packages: shiny, htmltools, htmlwidgets, base64enc, Seurat, tidyverse, qs, gridExtra, ggpubr, ggplot2, reshape2, Nebulosa, DT</li>
+            </ul>
+            
+            <h3 class="section-subtitle">Installation</h3>
+            <div class="code-block">
+                <pre>install.packages(c("shiny", "htmltools", "htmlwidgets", "base64enc", "Seurat", "tidyverse", "qs", "gridExtra", "ggpubr", "ggplot2", "reshape2", "Nebulosa", "DT"))</pre>
+            </div>
+            
+            <h3 class="section-subtitle">Running the Application</h3>
+            <div class="code-block">
+                <pre>library(shiny)
+runApp("app.R", host="0.0.0.0", port=3838)</pre>
+            </div>
+            <p>The application will be available at <code>http://localhost:3838</code></p>
+        </div>
+        
+        <div class="content">
+            <h2 class="section-title" id="deploy">Deployment</h2>
+            
+            <h3 class="section-subtitle">Option 1: Shinyapps.io (Recommended)</h3>
+            <p>Deploy your Shiny app to Shinyapps.io for easy sharing:</p>
+            <div class="code-block">
+                <pre># Install rsconnect package
+install.packages("rsconnect")
+
+# Connect to your Shinyapps.io account
+rsconnect::setAccountInfo(name='your-account', token='your-token', secret='your-secret')
+
+# Deploy the app
+rsconnect::deployApp("app.R")</pre>
+            </div>
+            
+            <h3 class="section-subtitle">Option 2: Docker</h3>
+            <p>Use Docker to containerize and deploy your app:</p>
+            <div class="code-block">
+                <pre># Build the Docker image
+docker build -t rsadb .
+
+# Run the Docker container
+docker run -p 3838:3838 rsadb</pre>
+            </div>
+            
+            <h3 class="section-subtitle">Option 3: Local Server</h3>
+            <p>Run the app on your own server using R:</p>
+            <div class="code-block">
+                <pre>Rscript -e "library(shiny); runApp('app.R', host='0.0.0.0', port=3838)"</pre>
+            </div>
+        </div>
+        
+        <div class="content">
+            <h2 class="section-title" id="about">About</h2>
+            
+            <h3 class="section-subtitle">Data Source</h3>
+            <p>The single-cell RNA-seq data was collected from the maternal-fetal interface of both normal pregnancy (NP) and recurrent spontaneous abortion (RSA) samples. The data was processed using Seurat and normalized with standardized workflows.</p>
+            
+            <h3 class="section-subtitle">Citation</h3>
+            <p>If you use this database in your research, please cite our publication (in preparation).</p>
+            
+            <h3 class="section-subtitle">License</h3>
+            <p>© 2025 RSAdb — Single-cell omics big data platform for recurrent spontaneous abortion. All rights reserved.</p>
+            
+            <h3 class="section-subtitle">Contact</h3>
+            <p>For questions or feedback, please contact the development team.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 RSAdb. All rights reserved.</p>
+        <p>Hosted on <a href="https://pages.github.com" style="color: #3498db; text-decoration: none;">GitHub Pages</a></p>
+    </footer>
+</body>
+</html>
